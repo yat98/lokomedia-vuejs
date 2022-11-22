@@ -4,11 +4,12 @@ const app = createApp({
         return {
             numberOne: 1,
             numberTwo: 2,
+            numberAmount: null,
         }
     },
-    computed: {
-        numberAmount() {
-            return this.numberOne + this.numberTwo
+    methods: {
+        calculate() {
+            this.numberAmount = this.numberOne + this.numberTwo
         }
     }
 })
