@@ -8,7 +8,11 @@
 </head>
 <body>
     <div id="app" >
-        <h1>{{ numberOne }} + {{ numberTwo }} = {{ numberAmount }}</h1>
+        <h1>Result {{ numberOne }} and  {{ numberTwo }}:</h1>
+        <p>Sum: {{ sum }}</p>
+        <p>Substraction: {{ subtraction }}</p>
+        <p>Multiple: {{ multiple }}</p>
+        <p>Distribute: {{ distribute }}</p>
         <button @click="calculate">Calculate</button>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
