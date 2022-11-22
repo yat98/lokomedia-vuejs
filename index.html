@@ -14,7 +14,11 @@
         <p>Multiple: {{ multiple }}</p>
         <p>Distribute: {{ distribute }}</p>
         <button @click="calculate">Calculate</button> -->
-        <input type="text" v-model="chat"> {{ desc }}
+        <!-- <input type="text" v-model="chat"> {{ desc }} -->
+        <input type="password" v-model="password">
+        <input type="password" v-model="confirmPassword">
+        <p v-html="passwordDesc"></p>
+        <button v-if="buttonShow">Sign Up</button>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>

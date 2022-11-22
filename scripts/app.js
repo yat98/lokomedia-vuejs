@@ -9,7 +9,11 @@ const app = createApp({
             multiple: 0,
             distribute: 0,
             chat: '',
-            desc: ''
+            desc: '',
+            password: '',
+            confirmPassword: '',
+            passwordDesc: '',
+            buttonShow: false,
         }
     },
     computed: {
@@ -35,10 +39,20 @@ const app = createApp({
        },
        isChatting(){
             this.desc = 'Sedang mengetik...'
+       },
+       isSamePassword(){
+            if(this.password == this.confirmPassword){
+                this.buttonShow = true
+                this.passwordDesc = 'Password is same please sign up'
+            }else{
+                this.buttonShow = false
+                this.passwordDesc = 'Password is not same'
+            }
        }
     },
     watch: {
-        chat: 'isChatting'
+        chat: 'isChatting',
+        confirmPassword: 'isSamePassword'
     }
 })
 
