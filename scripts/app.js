@@ -2,7 +2,7 @@ const { createApp } = Vue
 const app = createApp({
     data() {
         return {
-            show: true,
+            show: false,
             message: 'Learn VueJS Conditional'
         }
     }
