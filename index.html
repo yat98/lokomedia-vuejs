@@ -8,17 +8,7 @@
 </head>
 <body>
     <div id="app" >
-        <div v-if="show === 'yes'">
-            {{ message }}
-        </div>
-
-        <div v-else="show">
-            {{ elseMessage }}
-        </div>
-
-        <div v-show="show === 'yes'">
-            {{ message }}
-        </div>
+        <h1>{{ numberOne }} + {{ numberTwo }} = {{ numberAmount }}</h1>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
