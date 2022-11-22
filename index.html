@@ -12,6 +12,10 @@
             {{ message }}
         </div>
 
+        <div v-else="show">
+            {{ elseMessage }}
+        </div>
+
         <div v-show="show === 'yes'">
             {{ message }}
         </div>

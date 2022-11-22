@@ -2,8 +2,9 @@ const { createApp } = Vue
 const app = createApp({
     data() {
         return {
-            show: 'yes',
-            message: 'Learn VueJS Conditional'
+            show: 'no',
+            message: 'Learn VueJS Conditional',
+            elseMessage: 'Learn VueJS Else Conditional',
         }
     }
 })
