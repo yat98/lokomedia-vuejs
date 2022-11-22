@@ -8,6 +8,8 @@ const app = createApp({
             subtraction: 0,
             multiple: 0,
             distribute: 0,
+            chat: '',
+            desc: ''
         }
     },
     computed: {
@@ -30,7 +32,13 @@ const app = createApp({
             this.subtraction = this.numberOne - this.numberTwo
             this.multiple = this.numberOne * this.numberTwo
             this.distribute = this.numberOne / this.numberTwo
+       },
+       isChatting(){
+            this.desc = 'Sedang mengetik...'
        }
+    },
+    watch: {
+        chat: 'isChatting'
     }
 })
 
