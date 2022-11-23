@@ -15,6 +15,18 @@
         <div>
             <input type="text" @keyup.enter="enterMessage">
         </div>
+        <div>
+            <input type="text" 
+                @keyup.enter="enter"
+                @keyup.esc="esc"
+                @keyup.space="space"
+                @keyup.up="up"
+                @keyup.down="down"
+                @keyup.right="right"
+                @keyup.left="left"
+            >
+            <p>{{ result }}</p>
+        </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
