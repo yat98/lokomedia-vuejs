@@ -4,7 +4,8 @@ const app = createApp({
     data() {
         return {
             message: '',
-            messageArea: ''
+            messageArea: '',
+            choice: ''
         }
     }
 }).mount('#app')

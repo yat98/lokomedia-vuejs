@@ -20,6 +20,19 @@
                 {{ messageArea }}
             </p>
         </div>
+        <div>
+            <h3>Your choice:</h3>
+            <span>
+                <input type="radio" value="S2" v-model="choice" id="s2">
+                <label for="s2">S2</label>
+            </span>
+            <span>
+                <input type="radio" value="Married" v-model="choice" id="married">
+                <label for="married">Married</label>
+            </span>
+            <p>Your choice is:</p>
+            <p>{{ choice }}</p>
+        </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
