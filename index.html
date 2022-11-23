@@ -8,8 +8,13 @@
 </head>
 <body>
     <div id="app">
-        <button @click="showAlertMessage('Learn Click VueJS')">Click to see the message</button>
-        <p>{{ message }}</p>
+        <div>
+            <button @click="showAlertMessage('Learn Click VueJS')">Click to see the message</button>
+            <p>{{ message }}</p>
+        </div>
+        <div>
+            <input type="text" @keyup.enter="enterMessage">
+        </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>

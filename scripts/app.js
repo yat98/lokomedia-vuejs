@@ -12,6 +12,9 @@ const app = createApp({
         },
         showAlertMessage(message) {
             alert(message)
+        },
+        enterMessage() {
+            alert('Your click enter button')
         }
     }
 }).mount('#app')
