@@ -4,7 +4,9 @@ const app = createApp({
     data() {
         return {
             message: '',
-            result: ''
+            result: '',
+            show: false,
+            isEditing: false,
         }
     },
     methods: {

@@ -30,6 +30,16 @@
             >
             <p>{{ result }}</p>
         </div>
+        <div>
+            <button @click="show=!show">Toggle</button>
+            <p v-show="show">Show the text</p>
+        </div>
+        <div>
+            <button @click="isEditing=!isEditing"
+                :key="isEditing">
+                {{ isEditing ? 'save' : 'edit' }}
+            </button>
+        </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
