@@ -47,7 +47,10 @@
                 <input type="checkbox" value="Silat" v-model="hobbies" id="silat">
                 <label for="silat">Silat</label>
             </p>
-            <p>Your hobbies is: {{ hobbies }}</p>
+            <p>Your hobbies is:</p>
+            <ul>
+               <li v-for="hobby in hobbies">{{ hobby }}</li> 
+            </ul>
         </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
