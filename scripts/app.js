@@ -43,6 +43,9 @@ const app = createApp({
         },
         ctrlS() {
             this.result = '(CTRL + S) Button'
-        }
+        },
+        clickLeft() {
+            this.result = 'Click Left'
+        },
     }
 }).mount('#app')
