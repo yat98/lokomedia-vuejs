@@ -5,6 +5,7 @@ const app = createApp({
             image: 'assets/img/flower.webp',
             imageWidth: '300px',
             color: 'red',
+            tooltipMessage: 'This is flower image'
         }
     }
 }).mount('#app')

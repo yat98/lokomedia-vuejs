@@ -9,6 +9,7 @@
         .red{
             background-color: red;
         }
+
         img{
             padding: 10px;
         }
@@ -16,7 +17,7 @@
 </head>
 <body>
     <div id="app">
-        <img :src="image" :style="{width: imageWidth}" :class="color">
+        <img :src="image" :style="{width: imageWidth}" :class="color" :title="tooltipMessage">
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
