@@ -7,6 +7,7 @@ const app = createApp({
             messageArea: '',
             choice: '',
             hobbies: [],
+            city: '',
         }
     }
 }).mount('#app')

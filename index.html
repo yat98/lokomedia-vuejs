@@ -52,6 +52,21 @@
                <li v-for="hobby in hobbies">{{ hobby }}</li> 
             </ul>
         </div>
+        <div>
+            <h3>Your city:</h3>
+            <select v-model="city">
+                <option disabled value="">Select your city</option>
+                <option>Jakarta</option>
+                <option>Bandung</option>
+                <option>Medan</option>
+                <option>Cimahi</option>
+                <option>Gorontalo</option>
+            </select>
+            <p>Your city is:</p>
+            <p>
+                {{ city }}
+            </p>
+        </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
