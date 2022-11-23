@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn VueJS</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        img{
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <img :src="image" :style="{width: imageWidth}">
+        <img :src="image" :style="{width: imageWidth}" :class="color">
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
