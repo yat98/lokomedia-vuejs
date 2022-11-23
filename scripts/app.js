@@ -9,7 +9,9 @@ const app = createApp({
     methods: {
         showMessage() {
             this.message = 'Learn event click'
-            alert('Learn event click')
+        },
+        showAlertMessage(message) {
+            alert(message)
         }
     }
 }).mount('#app')
