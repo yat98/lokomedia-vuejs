@@ -9,9 +9,9 @@
 <body>
     <div id="app">
         <ol>
-            <li>{{ vechiles[0] }}</li>
-            <li>{{ vechiles[1] }}</li>
-            <li>{{ vechiles[2] }}</li>
+            <li v-for="vechile in vechiles">
+                {{ vechile }}
+            </li>
         </ol>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
