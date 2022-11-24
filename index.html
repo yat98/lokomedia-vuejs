@@ -23,8 +23,8 @@
         }
 
         .custom-enter-active, .custom-leave-active{
-            /* transition: all 1s ease; */
-        } */
+            transition: all 1s ease;
+        }
 
         .custom-enter-active{
             animation: animationOne 1s;
@@ -68,14 +68,30 @@
             100%{
                 transform: translateY(100px);
             }
+        } */
+
+        button{
+            position: absolute;
         }
+
+        .custom-enter-from,.custom-leave-to{
+            opacity: 0;
+        }
+
+        .custom-enter-active,.custom-leave-active{
+            transition: opacity 1s;
+        }
+
     </style>
 </head>
 <body>
     <div id="app">
-        <button @click="show = !show">Click Here</button>
+        <!-- <button @click="show = !show">Click Here</button> -->
         <transition name="custom">
-            <p v-if="show">This is transition example</p>
+            <!-- <p v-if="show">This is transition example</p> -->
+            <button @click="show = !show" :key="show">
+                {{ show ? 'On' : 'Off' }}
+            </button>
         </transition>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
