@@ -10,6 +10,9 @@ const app = createApp({
         addVechile() {
             this.vechiles.push(this.vechile)
             this.vechile = ''
+        },
+        removeVechile(key) {
+            this.vechiles.splice(key, 1)
         }
     }
 }).mount('#app')

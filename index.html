@@ -11,7 +11,8 @@
         <input type="text" v-model="vechile">
         <button @click="addVechile">Add</button>
         <ol>
-            <li v-for="vechile in vechiles">
+            <li v-for="(vechile, key) in vechiles">
+                <button @click="removeVechile(key)">x</button>
                 {{ vechile }}
             </li>
         </ol>
