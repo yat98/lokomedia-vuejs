@@ -70,7 +70,7 @@
             }
         } */
 
-        button{
+        /* button{
             position: absolute;
         }
 
@@ -85,19 +85,42 @@
         .custom-leave-to{
             transform: translateX(-30px);
             opacity: 0;
+        } */
+
+        .custom-number{
+            display: inline-block;
+            margin-right: 5px;
         }
 
+        .custom-enter-from{
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+
+        .custom-leave-to{
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        .custom-enter-active,.custom-leave-active{
+            transition: all .5s;
+        }
     </style>
 </head>
 <body>
     <div id="app">
+        <button @click="add">Add</button>
+        <button @click="remove">Remove</button>
         <!-- <button @click="show = !show">Click Here</button> -->
-        <transition name="custom">
+        <transition-group tag="div" name="custom" style="margin-top:30px">
             <!-- <p v-if="show">This is transition example</p> -->
-            <button @click="show = !show" :key="show">
+            <!-- <button @click="show = !show" :key="show">
                 {{ show ? 'On' : 'Off' }}
-            </button>
-        </transition>
+            </button> -->
+            <span v-for="number in numbers" :key="number" class="custom-number">
+                {{ number }}
+            </span>
+        </transition-group>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
