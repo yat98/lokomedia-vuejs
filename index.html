@@ -79,7 +79,12 @@
         }
 
         .custom-enter-active,.custom-leave-active{
-            transition: opacity 1s;
+            transition: all .5s;
+        }
+
+        .custom-leave-to{
+            transform: translateX(-30px);
+            opacity: 0;
         }
 
     </style>
