@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn VueJS</title>
     <style>
-        .v-enter,.v-leave-to{
+        .v-enter-from,.v-leave-to{
             opacity: 0;
+            color:green;
         }
 
-        .v-enter-to, .v-leave{
+        .v-enter-to, .v-leave-from{
             opacity: 1;
+            color:orange;
+        }
+
+        .v-leave-to{
+            color: yellow
         }
 
         .v-enter-active, .v-leave-active{
-            transition: opacity 1s;
+            transition: all 1s ease;
         }
     </style>
 </head>
