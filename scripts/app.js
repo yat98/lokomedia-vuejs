@@ -1,6 +1,11 @@
 const { createApp } = Vue
 const app = createApp({
-
+    data() {
+        return {
+            first: 'Learn VueJS',
+            second: 'Coffee'
+        }
+    }
 })
 
 app.component('bold', {
@@ -48,8 +53,16 @@ app.component('creation', {
         <div>
             <h2>{{ title }}</h2>
             <p>{{ desc }}</p>
-        </div>
-    `
+        </div>`
+})
+
+app.component('message', {
+    props: ['firstMessage','secondMessage'],
+    template: `
+        <div>
+            <b>{{ firstMessage }}</b> with
+            <b>{{ secondMessage }}</b>
+        </div>`
 })
 
 app.mount('#app')
