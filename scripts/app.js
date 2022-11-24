@@ -16,7 +16,8 @@ const app = createApp({
                 {type: 'Coca Cola', stock: false},
                 {type: 'Bimoli', stock: false},
                 {type: 'Sari Roti', stock: true},
-            ]
+            ],
+            search: ''
         }
     },
     methods: {
@@ -34,6 +35,12 @@ const app = createApp({
         },
         itemsNotExists() {
             return this.items.filter(item => !item.stock)
+        },
+        searchCompletedVechiles() {
+            return this.completedVechiles.filter(
+                vechile => vechile.brand.match(this.search)
+            )
         }
+
     }
 }).mount('#app')

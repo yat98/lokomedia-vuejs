@@ -50,6 +50,16 @@
                 </b>
             </ol>
         </div>
+        <div>
+            <input type="text" v-model="search">
+            <ol>
+                <li v-for="vechile in searchCompletedVechiles">
+                    Type: {{ vechile.type }},
+                    Brand: {{ vechile.brand }},
+                    Color: {{ vechile.color }}
+                </li>
+            </ol>
+       </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
