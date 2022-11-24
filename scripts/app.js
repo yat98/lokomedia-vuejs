@@ -3,8 +3,18 @@ const app = createApp({
     data() {
         return {
             first: 'Learn VueJS',
-            second: 'Coffee'
+            second: 'Coffee',
+            valid: false,
+            valid2: false,
         }
+    },
+    methods: {
+        validate() {
+            this.valid = true
+        },
+        validate2() {
+            this.valid2 = true
+        },
     }
 })
 
@@ -63,6 +73,21 @@ app.component('message', {
             <b>{{ firstMessage }}</b> with
             <b>{{ secondMessage }}</b>
         </div>`
+})
+
+app.component('name', {
+    template: `
+        <input type="text" placeholder="Input your name" @blur="validate"/>`,
+    methods: {
+        validate() {
+            this.$emit('applied')
+        }
+    }
+})
+
+app.component('name2', {
+    template: `
+        <input type="text" placeholder="Input your name" @blur="$emit('validate2')"/>`,
 })
 
 app.mount('#app')
