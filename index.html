@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn VueJS</title>
     <style>
-        .custom-enter-from,.custom-leave-to{
+        /* .custom-enter-from,.custom-leave-to{
             opacity: 0;
             color:green;
             transform: scale(0)
@@ -23,7 +23,51 @@
         }
 
         .custom-enter-active, .custom-leave-active{
-            transition: all 1s ease;
+            /* transition: all 1s ease; */
+        } */
+
+        .custom-enter-active{
+            animation: animationOne 1s;
+        }
+        
+        .custom-leave-active{
+            animation: animationTwo 1s;
+        }
+
+        @keyframes animationOne{
+            0%{
+                transform: scale(0);
+            }
+            70%{
+                transform: scale(2);
+            }
+            80%{
+                transform: scale(0.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        @keyframes animationTwo{
+            0%{
+                transform: translateY(0);
+            }
+            5%{
+                transform: rotate(-5deg);
+                transform-origin: 0 0;
+            }
+            30%{
+                transform: rotate(70deg);
+                transform-origin: 0 0;
+            }
+            40%{
+                transform: rotate(30deg);
+                transform-origin: 0 0
+            }
+            100%{
+                transform: translateY(100px);
+            }
         }
     </style>
 </head>
