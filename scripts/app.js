@@ -26,7 +26,7 @@ const app = createApp({
         },
         removeVechile(key) {
             this.vechiles.splice(key, 1)
-        }
+        },
     },
     computed: {
         itemsExists() {

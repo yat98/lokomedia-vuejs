@@ -41,6 +41,15 @@
                 <li v-for="item in itemsNotExists">{{ item.type }}</li>
             </ul>
         </div>
+        <div>
+            <ol>
+                <b v-for="i in 10">
+                    <span v-if="i != 2">
+                        {{ `${i} ` }}
+                    </span>
+                </b>
+            </ol>
+        </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
