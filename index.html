@@ -8,6 +8,8 @@
 </head>
 <body>
     <div id="app">
+        <input type="text" v-model="vechile">
+        <button @click="addVechile">Add</button>
         <ol>
             <li v-for="vechile in vechiles">
                 {{ vechile }}
