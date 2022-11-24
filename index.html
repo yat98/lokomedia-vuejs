@@ -27,6 +27,20 @@
                 </li>
             </ol> 
        </div>
+       <div>
+            <h2>All Items</h2>
+            <ul>
+                <li v-for="item in items">{{ item.type }}</li>
+            </ul>
+            <h2>All Items Exists</h2>
+            <ul>
+                <li v-for="item in itemsExists">{{ item.type }}</li>
+            </ul>
+            <h2>All Items Not Exists</h2>
+            <ul>
+                <li v-for="item in itemsNotExists">{{ item.type }}</li>
+            </ul>
+        </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>

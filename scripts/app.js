@@ -8,6 +8,14 @@ const app = createApp({
                 {type: 'car', brand: 'honda', color: 'red'},
                 {type: 'motorcycle', brand: 'honda', color: 'black'},
                 {type: 'bicycle', brand: 'phoenix', color: 'blue'},
+            ],
+            items: [
+                {type: 'Indomie Mie Rebus', stock: true},
+                {type: 'Mie Sedaap Goreng', stock: true},
+                {type: 'Chiki', stock: false},
+                {type: 'Coca Cola', stock: false},
+                {type: 'Bimoli', stock: false},
+                {type: 'Sari Roti', stock: true},
             ]
         }
     },
@@ -18,6 +26,14 @@ const app = createApp({
         },
         removeVechile(key) {
             this.vechiles.splice(key, 1)
+        }
+    },
+    computed: {
+        itemsExists() {
+            return this.items.filter(item => item.stock)
+        },
+        itemsNotExists() {
+            return this.items.filter(item => !item.stock)
         }
     }
 }).mount('#app')
