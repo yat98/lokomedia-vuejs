@@ -90,4 +90,48 @@ app.component('name2', {
         <input type="text" placeholder="Input your name" @blur="$emit('validate2')"/>`,
 })
 
+app.component('list', {
+    template: `<li><slot></slot></li>`,
+})
+
+app.component('vechiles', {
+    template: `
+        <h1 v-if="showTitle">Select Your Gift</h1>    
+        <ul>
+            <list v-for="(vechile, index) in vechiles">
+                <span v-if="showGift">
+                    {{ vechile.type }}
+                    <button @click="alertGift(index)" v-if="showAlert">Select</button>
+                </span>
+            </list>
+        </ul>
+        <h1 v-if="showResult">
+            Please get your gift in the dealer
+        </h1>
+    `,
+    data() {
+        return {
+            vechiles: [
+                {type: 'Plane'},
+                {type: 'Car'},
+                {type: 'Motorcycle'},
+            ],
+            showAlert: true,
+            showGift: true,
+            showTitle: true,
+            showResult: false,
+        }
+    },
+    methods: {
+        alertGift(index){
+            alert(`Congratulation you get ${this.vechiles[index].type} gift`)
+            this.showAlert = false
+            this.showGift = false
+            this.showTitle = false
+            this.showResult = true
+
+        }
+    }
+})
+
 app.mount('#app')
