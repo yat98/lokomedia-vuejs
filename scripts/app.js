@@ -4,7 +4,7 @@ const app = createApp({
 })
 
 app.component('bold', {
-    template: '<b>This message from component</b>'
+    template: '<b><slot></slot></b>'
 })
 
 app.mount('#app')
