@@ -3,7 +3,12 @@ const app = createApp({
     data() {
         return {
             vechile: '',
-            vechiles: ['car', 'motorcyle', 'bicycle']
+            vechiles: ['car', 'motorcyle', 'bicycle'],
+            completedVechiles: [
+                {type: 'car', brand: 'honda', color: 'red'},
+                {type: 'motorcycle', brand: 'honda', color: 'black'},
+                {type: 'bicycle', brand: 'phoenix', color: 'blue'},
+            ]
         }
     },
     methods: {

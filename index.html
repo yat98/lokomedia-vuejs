@@ -8,14 +8,25 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="vechile">
-        <button @click="addVechile">Add</button>
-        <ol>
-            <li v-for="(vechile, key) in vechiles">
-                <button @click="removeVechile(key)">x</button>
-                {{ vechile }}
-            </li>
-        </ol>
+       <div>
+            <input type="text" v-model="vechile">
+            <button @click="addVechile">Add</button>
+            <ol>
+                <li v-for="(vechile, key) in vechiles">
+                    <button @click="removeVechile(key)">x</button>
+                    {{ vechile }}
+                </li>
+            </ol>
+       </div>
+       <div>
+            <ol>
+                <li v-for="vechile in completedVechiles">
+                    Type: {{ vechile.type }},
+                    Brand: {{ vechile.brand }},
+                    Color: {{ vechile.color }}
+                </li>
+            </ol> 
+       </div>
     </div>
     <script src="vendor/vuejs/vue.global.js.js"></script>
     <script src="scripts/app.js"></script>
