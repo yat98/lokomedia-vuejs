@@ -42,4 +42,14 @@ app.component('register', {
         </div>`
 })
 
+app.component('creation', {
+    props: ['title','desc'],
+    template: `
+        <div>
+            <h2>{{ title }}</h2>
+            <p>{{ desc }}</p>
+        </div>
+    `
+})
+
 app.mount('#app')
