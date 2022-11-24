@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn VueJS</title>
     <style>
-        .v-enter-from,.v-leave-to{
+        .custom-enter-from,.custom-leave-to{
             opacity: 0;
             color:green;
         }
 
-        .v-enter-to, .v-leave-from{
+        .custom-enter-to, .custom-leave-from{
             opacity: 1;
             color:orange;
         }
 
-        .v-leave-to{
+        .custom-leave-to{
             color: yellow
         }
 
-        .v-enter-active, .v-leave-active{
+        .custom-enter-active, .custom-leave-active{
             transition: all 1s ease;
         }
     </style>
@@ -28,7 +28,7 @@
 <body>
     <div id="app">
         <button @click="show = !show">Click Here</button>
-        <transition>
+        <transition name="custom">
             <p v-if="show">This is transition example</p>
         </transition>
     </div>
